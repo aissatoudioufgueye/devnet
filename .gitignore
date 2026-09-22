@@ -1,0 +1,18 @@
+# Environnement virtuel
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets (voir .env.example)
+.env
+
+# Générés à l'exécution — on garde le dossier via .gitkeep,
+# mais pas leur contenu
+logs/*
+!logs/.gitkeep
+backups/*
+!backups/.gitkeep
+
+# Cache pytest
+.pytest_cache/

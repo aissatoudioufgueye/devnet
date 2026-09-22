@@ -1,0 +1,19 @@
+interface FastEthernet0/0
+ description Trunk vers SW5-CORE
+ no ip address
+ no shutdown
+!
+interface FastEthernet0/0.30
+ description Sous-interface LAN-SL (PC1/PC2)
+ encapsulation dot1Q 30
+ ip address 10.30.10.1 255.255.255.0
+!
+interface FastEthernet2/1
+ description Lien vers R1-DKR (hub, extension bonus)
+ ip address 192.168.30.2 255.255.255.0
+ no shutdown
+!
+router eigrp 100
+ no auto-summary
+ network 10.30.10.0 0.0.0.255
+ network 192.168.30.0 0.0.0.255

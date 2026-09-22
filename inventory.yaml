@@ -1,0 +1,38 @@
+# Inventaire des équipements du lab Groupe-ISI (Dakar / Abidjan).
+# Les identifiants de connexion NE sont PAS ici : ils sont chargés
+# depuis des variables d'environnement (voir .env.example) afin de ne
+# jamais versionner de secret en clair.
+#
+# Pour ajouter un 3e site (extension bonus, ex. R3-THS), il suffit
+# d'ajouter une entrée ici : automation.py n'a pas à être modifié.
+
+devices:
+  - name: R1-DKR
+    host: 192.168.10.1
+
+  - name: R2-ABJ
+    host: 192.168.10.2
+
+  - name: SW1-CORE
+    host: 192.168.10.11
+
+  - name: SW2-CORE
+    host: 192.168.10.12
+
+  - name: SW3-ACC
+    host: 192.168.10.13
+
+  - name: SW4-ACC
+    host: 192.168.10.14
+
+  # --- Extension bonus : 3e site (Saint-Louis) ---
+  # Ajouté sans toucher à automation.py : c'est exactement ce que
+  # signifie "outil générique" au §2 du cahier des charges.
+  - name: R3-SL
+    host: 192.168.10.3
+
+  - name: SW5-CORE
+    host: 192.168.10.15
+
+  - name: SW6-ACC
+    host: 192.168.10.16

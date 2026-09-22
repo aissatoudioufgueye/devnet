@@ -1,0 +1,12 @@
+vlan 10
+ name LAN-DKR
+!
+interface Ethernet0/0
+ description Trunk vers R1-DKR
+ switchport mode trunk
+ switchport trunk allowed vlan 10
+!
+interface Ethernet0/1
+ description Trunk vers SW3-ACC
+ switchport mode trunk
+ switchport trunk allowed vlan 10

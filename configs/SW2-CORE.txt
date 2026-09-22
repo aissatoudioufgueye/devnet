@@ -1,0 +1,13 @@
+configure terminal
+vlan 20
+ name LAN-ABJ
+!
+interface Ethernet0/0
+ description Trunk vers R2-ABJ
+ switchport mode trunk
+ switchport trunk allowed vlan 20
+!
+interface Ethernet0/1
+ description Trunk vers SW4-ACC
+ switchport mode trunk
+ switchport trunk allowed vlan 20

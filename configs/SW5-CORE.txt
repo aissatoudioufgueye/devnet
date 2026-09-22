@@ -1,0 +1,12 @@
+vlan 30
+ name LAN-SL
+!
+interface Ethernet0/0
+ description Trunk vers R3-SL
+ switchport mode trunk
+ switchport trunk allowed vlan 30
+!
+interface Ethernet0/1
+ description Trunk vers SW6-ACC
+ switchport mode trunk
+ switchport trunk allowed vlan 30

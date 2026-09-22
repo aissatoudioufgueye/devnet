@@ -1,0 +1,13 @@
+vlan 30
+ name LAN-SL
+!
+interface Ethernet0/0
+ description Trunk vers SW5-CORE
+ switchport mode trunk
+ switchport trunk allowed vlan 30
+!
+interface Ethernet0/2
+ description Port PC5
+ switchport mode access
+ switchport access vlan 30
+ spanning-tree portfast
