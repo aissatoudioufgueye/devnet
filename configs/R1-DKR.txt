@@ -1,16 +1,12 @@
-interface FastEthernet0/0
- description Trunk vers SW1-CORE
- no ip address
- no shutdown
-
-interface FastEthernet0/0.10
+configure terminal
+interface FastEthernet1/0.10
  description Sous-interface LAN-DKR (PC1)
  encapsulation dot1Q 10
  ip address 10.10.10.1 255.255.255.0
 
-interface FastEthernet1/0
+interface FastEthernet2/0
  description Lien inter-agence vers R2-ABJ
- ip address 192.168.20.1 255.255.255.0
+ ip address 192.168.10.2 255.255.255.0
  no shutdown
 
 interface FastEthernet2/0
@@ -21,5 +17,5 @@ interface FastEthernet2/0
 router eigrp 100
  no auto-summary
  network 10.10.10.0 0.0.0.255
- network 192.168.20.0 0.0.0.255
- network 192.168.30.0 0.0.0.255
+ network 10.20.10.0 0.0.0.255
+ network 192.168.10.0 0.0.0.255
